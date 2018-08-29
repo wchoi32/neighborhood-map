@@ -6,9 +6,15 @@ body {
   padding: 0;
 }
 
+header {
+  margin-top: 35px;
+}
+
 .container {
-  height: 100%;
   position: relative;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
 }
 
 input {
@@ -22,11 +28,6 @@ h1 {
   text-align: center;
 }
 
-#hide-listings,
-#show-listings {
-  width: 48%;
-}
-
 hr {
   background: #D0D7D9;
   height: 1px;
@@ -35,14 +36,16 @@ hr {
 }
 
 #map {
-  bottom: 0px;
+  float: right;
+  display: flex;
+}
+
+#content {
   height: 100%;
-  left: 362px;
-  position: absolute;
-  right: 0px;
 }
 
 .options-box {
+  float: left;
   background: #fff;
   border: 1px solid #999;
   border-radius: 3px;
@@ -58,24 +61,12 @@ hr {
   height: 200px;
 }
 
-#search-within-time-text {
-  width: 84%;
-}
-
 .text {
   font-size: 12px;
 }
 
-#toggle-drawing {
-  width: 27%;
-  position: relative;
-  margin-left: 10px;
-}
-
-#zoom-to-area-text {
-  width: 70%;
-}
-
-#zoom-to-area {
-  width: 24%;
+@media screen and (max-width: 1024px) {
+  .options-box {
+      display: none !important;
+  }
 }
