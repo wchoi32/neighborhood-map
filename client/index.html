@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -18,7 +18,19 @@
         <h1>Map of Bay Area</h1>
       </div>
     </header>
-    <section class="row" id="content">
+    <article class="top-box" id="left">
+      <hr>
+      <div>
+        <input id="search-within-time-text" type="text" placeholder="Ex: Search HQ" data-bind="textInput: searchLocation, valueUpdate: 'afterKeydown'">
+      </div>
+      <hr>
+      <div>
+        <ul data-bind="foreach: searchList">
+          <li data-bind="text: title, click: showInfo"></li>
+        </ul>
+      </div>
+    </article>
+    <section class="row main" id="content">
       <article class="options-box col-md-3" id="left">
         <hr>
         <div>
@@ -31,7 +43,7 @@
           </ul>
         </div>
       </article>
-      <article id="map" class="col-md-9"></article>
+      <article id="map" class="col-md-9 map-style"></article>
     </section>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

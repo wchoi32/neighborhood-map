@@ -6,16 +6,22 @@ var largeInfowindow;
 var bounds;
 
 function googleMapsErr() {
-  alert('Google Maps Failed To Load. Please refresh!')
+  alert('Google Maps Failed To Load. Please refresh!');
 }
 
 // initialize google maps
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
+  var constants = {
     center: { lat: 37.558546, lng: -122.271079 },
     zoom: 10,
-    styles: styles,
     mapTypeControl: false
+  }
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: constants.center,
+    zoom: constants.zoom,
+    styles: styles,
+    mapTypeControl: constants.mapTypeControl
   });
 
   largeInfowindow = new google.maps.InfoWindow();

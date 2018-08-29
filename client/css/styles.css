@@ -35,12 +35,12 @@ hr {
   border: none;
 }
 
-#map {
+.map-style {
   float: right;
   display: flex;
 }
 
-#content {
+.main {
   height: 100%;
 }
 
@@ -56,17 +56,21 @@ hr {
   width: 340px;
 }
 
-#pano {
-  width: 200px;
-  height: 200px;
-}
-
 .text {
   font-size: 12px;
 }
 
+.top-box {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .options-box {
       display: none !important;
+  }
+  .top-box {
+    display: block;
+  }
+  .map-style {
+    float: bottom;
   }
 }
